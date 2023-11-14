@@ -1,17 +1,19 @@
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext, useRef, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import styles from "./Register.module.scss";
 import { signup } from "../../apis/users";
 import { isFileExtValid, isFileToBig } from "../../utils/utils";
+import { UserContext } from "../../context/UserContext";
 
 export default function Register() {
   const [feedback, setFeedback] = useState("");
   const [feedbackGood, setFeedbackGood] = useState("");
   const navigate = useNavigate();
   const avatarRef = useRef();
+  const {user} = useContext(UserContext);
 
   const yupSchema = yup.object({
     pseudo: yup
@@ -97,6 +99,7 @@ export default function Register() {
     }
   }
 
+  if (user) {return <Navigate to="/" />}
   return (
     <div
       className={`d-flex flex-column justify-content-center align-items-center flex-fill`}

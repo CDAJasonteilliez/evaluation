@@ -1,6 +1,5 @@
 import styles from "./Header.module.scss";
 import logo from "../../assets/images/logo.png";
-import { useState } from "react";
 // import MobileMenu from "./components/MobileMenu";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";

@@ -1,0 +1,68 @@
+.contentCard {
+    max-width: 980px;
+    width: 100%;
+    .imgContainer {
+        width: 30%;
+    }
+    .infoContainer {
+        width: 70%;
+    }
+    .textRed {
+        color: var(--error);
+    }
+    .noteContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(189, 189, 189);
+        border-radius: 10px;
+        padding: 20px;
+        h2 {
+            margin-bottom: 20px;
+        }
+        .star{
+            font-size: 20px;
+            color: gray;
+        
+            &.gold {
+                color: yellow;
+            }
+        }
+    }
+    .info2Container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        div {
+            margin:20px;
+        }
+    }
+
+    .textArea {
+        padding: 10px 15px;
+        border: 2px solid var(--gray-2);
+        border-radius: 20px;
+        resize: vertical;
+    }
+    .feedback {
+        color: red;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      
+    .feedbackGood {
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+    }
+
+    .commentsSection{
+        margin-top: 20px;
+        div {
+            padding-left: 20px;
+            border-top: solid 1px black;
+        }
+    }
+  }

@@ -3,7 +3,9 @@ import { SeriesContext } from "../../context/SeriesContext";
 import { UserContext } from "../../context/UserContext";
 import styles from "./Favorites.module.scss";
 import SerieFav from "./Components/SerieFav/SerieFav";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
+import { Navigate } from "react-router-dom";
+
 
 export default function Favorites() {
   const { series } = useContext(SeriesContext);
@@ -16,6 +18,7 @@ export default function Favorites() {
     setFilter(search.trim().toLowerCase());
   };
 
+  if(!user) {return <Navigate to="/" />}
   return (
     <div className="d-flex flex-column flex-fill container">
       <h1 className="mb20">Découvrez nos dernières critiques</h1>
@@ -39,7 +42,7 @@ export default function Favorites() {
               (serie) =>
                 user.likes.filter(
                   (el) => serie.idSerie === el.idSerie && el.likes === 1
-                ).length != 0
+                ).length !== 0
             )
             .filter((serie) => serie.title.toLowerCase().includes(filter))
             .map((serie) => {

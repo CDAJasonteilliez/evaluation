@@ -1,9 +1,13 @@
-import { Suspense } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Suspense, useContext } from "react";
+import { NavLink, Navigate, Outlet } from "react-router-dom";
 
 import styles from './Admin.module.scss';
+import { UserContext } from "../../context/UserContext";
 
 export default function Admin() {
+    const {user} = useContext(UserContext)
+
+    if (user && user.admin === '1') {return <Navigate to="/" />}
     return (
         <div className="d-flex flex-column flex-fill container980">
             <ul className="d-flex p20">

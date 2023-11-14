@@ -6,11 +6,12 @@ import styles from "../Register/Register.module.scss";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import { signin } from "../../apis/users";
+import { Navigate } from "react-router-dom";
 
 export default function Login() {
   const [feedback, setFeedback] = useState("");
   const [feedbackGood, setFeedbackGood] = useState("");
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -61,6 +62,7 @@ export default function Login() {
     }
   }
 
+  if (user) {return <Navigate to="/" />}
   return (
     <div
       className={`d-flex flex-column justify-content-center align-items-center flex-fill`}
