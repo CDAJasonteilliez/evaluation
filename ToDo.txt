@@ -1,0 +1,4 @@
+-> Modifier Profile
+-> Modifier mot de passe
+-> Ajouter regex pour la sécurisation email
+-> Bug supprimer commentaire quand il n'y a pas de commentaire

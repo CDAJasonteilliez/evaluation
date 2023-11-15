@@ -61,7 +61,6 @@ export async function updateSerie(values) {
 }
 
 export async function deleteSerie(values) {
-    console.log(values);
     try{
         const response = await fetch(`http://localhost:8000/api/series/deleteSerie/${values}`, {
           method: "DELETE",

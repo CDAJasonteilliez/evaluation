@@ -5,15 +5,55 @@
 
     h1 {
         width: fit-content;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
-    .infoContainer{
+    .Container{
         display: flex;
+        margin-bottom: 30px;
         .avatarContainer{
             max-width: 150px;
-            max-height: 250px;
+            max-height: 150px;
             margin-right: 20px;
+            img {
+                max-width: 150px;
+                max-height: 150px;
+            }
+        }
+        .infoContainer {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
+    .popupContainer{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top :0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(50, 50, 50, 0.75);
+        .popup {
+            padding: 20px;
+            border-radius: 20px;
+            border: solid 2px rgb(125, 125, 125);
+            background: white;
+            .popupText {
+                margin-bottom: 40px;
+                text-align: center;
+                .popupAlert {
+                    font-weight: bold;
+                    color: red;
+                }
+            }
+            .popupButton {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content:space-around;
+            }
+        }
 
+    }
 }

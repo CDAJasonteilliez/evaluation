@@ -13,7 +13,7 @@ export default function SerieEnCours({ serie, enCoursData, modifierEnCours }) {
                 </div>
                 <p><strong>{serie.title}</strong></p>
             </div>
-            <p>Série {enCoursData == 1 ? "en cours" : "terminé"}</p>
+            <p>Série {enCoursData === 1 ? "en cours" : "terminé"}</p>
             <button onClick={() => modifierEnCours(serie.idSerie, 1)} className={`btn btn-primary-reverse ml20`}>
                 En cours
             </button>

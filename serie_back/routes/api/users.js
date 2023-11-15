@@ -90,4 +90,29 @@ router.post("/login", (req, res) => {
   });
 });
 
+router.delete("/deleteUser/:id", async (req,res) => {
+  const id = req.params.id;
+  const getsql = "SELECT avatar FROM users WHERE idUser = ?"
+  connection.query(getsql, [id], async (err,result) => {
+    if (err) throw err;
+    
+    // Supprimer avatar
+    if (result[0].avatar !== null) {
+      const filePath = path.join(__dirname, '..', '..', "/upload/avatars", result[0].avatar);
+      fs.unlink(filePath, (err) => {
+        if (err) {
+        console.log("Erreur suppression fichier");
+        }
+        console.log("Fichier supprimé");
+      });
+    }
+
+    // Supprimer DDB
+    const deleteSql = "DELETE FROM users WHERE idUser = ?";
+    connection.query(deleteSql, [id], (err, result) => {
+      if (err) throw err;
+      res.status(200).json({ messageGood: "User supprimé avec succés" });
+    });
+  });
+});
 module.exports = router;

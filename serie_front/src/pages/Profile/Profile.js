@@ -5,7 +5,7 @@ import { NavLink, Navigate, Outlet } from "react-router-dom";
 import styles from './Profile.module.scss';
 
 export default function Profile() {
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   if (!user) {return <Navigate to="/" />}
 
