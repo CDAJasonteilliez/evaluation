@@ -113,6 +113,7 @@ export default function Details() {
     const yupSchema = yup.object({
         comments: yup
             .string()
+            .required("Le champ doit être remplie")
             .max(500, "500 caractères maximum.")
     })
 

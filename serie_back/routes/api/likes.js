@@ -20,7 +20,6 @@ router.post("/changeLikes", (req, res) => {
     if (err) throw err;
     if (resultat.length != 0) {
       newLine = false;
-      console.log(resultat[0]);
       data.comments = resultat[0].comments;
       data.maNote = resultat[0].maNote;
       data.enCours = resultat[0].enCours;
@@ -57,7 +56,6 @@ router.post("/changeMaNote", (req, res) => {
     if (err) throw err;
     if (resultat.length != 0) {
       newLine = false;
-      console.log(resultat[0]);
       data.likes = resultat[0].likes;
       data.comments = resultat[0].comments;
       data.enCours = resultat[0].enCours;
@@ -94,7 +92,6 @@ router.post("/changeEnCours", (req, res) => {
     if (err) throw err;
     if (resultat.length != 0) {
       newLine = false;
-      console.log(resultat[0]);
       data.likes = resultat[0].likes;
       data.comments = resultat[0].comments;
       data.maNote = resultat[0].maNote;
@@ -131,7 +128,6 @@ router.post("/changeWishList", (req, res) => {
     if (err) throw err;
     if (resultat.length != 0) {
       newLine = false;
-      console.log(resultat[0]);
       data.likes = resultat[0].likes;
       data.comments = resultat[0].comments;
       data.maNote = resultat[0].maNote;
@@ -168,7 +164,6 @@ router.post("/changeComments", (req, res) => {
     if (err) throw err;
     if (resultat.length != 0) {
       newLine = false;
-      console.log(resultat[0]);
       data.likes = resultat[0].likes;
       data.wishList = resultat[0].wishList;
       data.maNote = resultat[0].maNote;

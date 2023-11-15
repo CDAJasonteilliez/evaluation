@@ -34,7 +34,6 @@ router.post("/register", uploadAvatar.single("avatar"), async (req, res) => {
           console.log("Fichier supprimé");
         });
       }
-      console.log({ avatar });
       res.status(200).json(isEmail);
     } else {
       const sql =
@@ -79,6 +78,9 @@ router.post("/login", (req, res) => {
               messageGood: "Connection réussie, Vous allez être redirigé(e)",
               idUser: resultat[0].idUser,
               admin: resultat[0].admin,
+              pseudo: resultat[0].pseudo,
+              email: resultat[0].email,
+              avatar: resultat[0].avatar,
               likes: resultatLikes,
             });
           }

@@ -1,0 +1,19 @@
+.settingsContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+    .infoContainer{
+        display: flex;
+        .avatarContainer{
+            max-width: 150px;
+            max-height: 250px;
+            margin-right: 20px;
+        }
+    }
+
+}

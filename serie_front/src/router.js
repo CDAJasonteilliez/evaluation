@@ -14,6 +14,9 @@ const NewSerie = lazy(() => import('./pages/Admin/Components/NewSerie/NewSerie.j
 const AllSeries = lazy(() => import('./pages/Admin/Components/AllSeries/AllSeries.js'));
 const Favorites = lazy(() => import('./pages/Favorites/Favorites.js'));
 const ModifySerie = lazy(() => import('./pages/Admin/Components/ModifySerie/ModifySerie.js'));
+const Wishlist = lazy(() => import('./pages/Profile/Components/Wishlist/Wishlist.js'));
+const EnCours = lazy(() => import('./pages/Profile/Components/EnCours/EnCours.js'));
+const Settings = lazy(() => import('./pages/Profile/Components/Settings/Settings.js'));
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +40,20 @@ export const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <Profile />,
+                children: [
+                    {
+                        path: "",
+                        element: <Settings />
+                    },
+                    {
+                        path: "wishlist",
+                        element: <Wishlist />
+                    },
+                    {
+                        path: "encours",
+                        element: <EnCours />
+                    },
+                ]
             },
             {
                 path: '/admin',
@@ -64,7 +81,6 @@ export const router = createBrowserRouter([
                 path: '/favorites',
                 element: <Favorites />
             }
-
         ]
     }
 ])

@@ -51,6 +51,9 @@ export default function Login() {
         setUser({
           idUser: response.idUser,
           admin: response.admin,
+          pseudo: response.pseudo,
+          email: response.email,
+          avatar: response.avatar,
           likes: response.likes,
         });
         setTimeout(() => {

@@ -27,7 +27,6 @@ router.post('/addSerie', uploadSerie.single("poster"), async (req,res) => {
 router.put('/updateSerie', uploadSerie.single("poster"), async (req, res) => {
   const {idSerie, title, year, resume, numberSeason, still, imdbNote, sensCritiqueNote, country, oldPoster} = req.body;
   let poster = oldPoster
-  console.log(req.file);
 
   // Si nouveau poster
   if (req.file != undefined) {
@@ -45,7 +44,6 @@ router.put('/updateSerie', uploadSerie.single("poster"), async (req, res) => {
 
   let stillBool = still === '1' ? 1: 0;
   const values = [ title, poster, year, resume, numberSeason, stillBool, imdbNote, sensCritiqueNote, country, idSerie]
-  console.log("position 1",values)
 
   const sql = "UPDATE series SET title = ?, poster = ?, year = ?, resume = ?, numberSeason = ?, still = ?, imdbNote = ?, sensCritiqueNote = ?, country = ? WHERE idSerie = ?";
   connection.query(sql, values, (err, result) => {
