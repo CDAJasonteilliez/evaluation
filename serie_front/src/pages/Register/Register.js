@@ -92,7 +92,7 @@ export default function Register() {
         setFeedbackGood(response.messageGood);
         setTimeout(() => {
           navigate("/login");
-        }, 3000);
+        }, 1500);
       }
     } catch (error) {
       console.error(error);

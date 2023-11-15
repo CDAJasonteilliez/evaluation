@@ -58,7 +58,7 @@ export default function Login() {
         });
         setTimeout(() => {
           navigate("/");
-        }, 3000);
+        }, 1500);
       }
     } catch (error) {
       console.error(error);
