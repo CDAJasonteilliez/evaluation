@@ -1,1 +1,0 @@
-Ne pas oublier de passer les contraintes de la tables 'likes' à ON DELETE CASCADE ON UPDATE CASCADE.

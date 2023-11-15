@@ -1,0 +1,12 @@
+À finir :
+
+-> Modifier Profile
+-> Modifier mot de passe
+-> Ajouter regex pour la sécurisation email
+-> Bug supprimer commentaire quand il n'y a pas de commentaire
+
+Lors du test :
+-> Ne pas oublier de passer les contraintes de la tables 'likes' à ON DELETE CASCADE ON UPDATE CASCADE.
+
+Difficulté rencontrés :
+-> Re-render les composants lors de la modification des données.
