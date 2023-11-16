@@ -10,3 +10,12 @@ Lors du test :
 
 Difficulté rencontrés :
 -> Re-render les composants lors de la modification des données.
+
+connexion :
+-> compte admin :
+    -> identifiant: admin@admin.com   password : admin
+-> compte user :
+    -> identifiant: test@gmail.com   password : password
+    -> identifiant: test2@gmail.com   password : password
+
+
