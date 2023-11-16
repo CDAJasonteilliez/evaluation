@@ -5,15 +5,20 @@
 -> Ajouter regex pour la sécurisation email
 -> Bug supprimer commentaire quand il n'y a pas de commentaire
 
-Lors du test :
+Si utilisation de BDD de base :
+
 -> Ne pas oublier de passer les contraintes de la tables 'likes' à ON DELETE CASCADE ON UPDATE CASCADE.
+-> ne rien faire si utilisation de ma BDD.
 
 Difficulté rencontrés :
+
 -> Re-render les composants lors de la modification des données.
 
 connexion :
+
 -> compte admin :
     -> identifiant: admin@admin.com   password : admin
+    
 -> compte user :
     -> identifiant: test@gmail.com   password : password
     -> identifiant: test2@gmail.com   password : password
